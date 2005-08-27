@@ -1,5 +1,3 @@
-# $Rev: 3270 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	XScrnSaver library
 Summary(pl):	Biblioteka XScrnSaver
 Name:		xorg-lib-libXScrnSaver
@@ -12,12 +10,12 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXScrnSaver-%{version}.ta
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libXScrnSaver-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -28,12 +26,11 @@ XScrnSaver library.
 %description -l pl
 Biblioteka XScrnSaver.
 
-
 %package devel
 Summary:	Header files libXScrnSaver development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXScrnSaver
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXScrnSaver = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-scrnsaverproto-devel
 
@@ -49,12 +46,11 @@ Biblioteka XScrnSaver.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXScrnSaver.
 
-
 %package static
-Summary:	Static libXScrnSaver libraries
-Summary(pl):	Biblioteki statyczne libXScrnSaver
-Group:		Development/Libraries
-Requires:	xorg-lib-libXScrnSaver-devel = %{version}-%{release}
+Summary:	Static libXScrnSaver library
+Summary(pl):	Biblioteka statyczna libXScrnSaver
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 XScrnSaver library.
@@ -66,10 +62,8 @@ Biblioteka XScrnSaver.
 
 Pakiet zawiera statyczn± bibliotekê libXScrnSaver.
 
-
 %prep
 %setup -q -n libXScrnSaver-%{version}
-
 
 %build
 %{__libtoolize}
@@ -81,7 +75,6 @@ Pakiet zawiera statyczn± bibliotekê libXScrnSaver.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -89,28 +82,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXScrnSaver.so.*
-
+%attr(755,root,root) %{_libdir}/libXScrnSaver.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libXScrnSaver.so
 %{_libdir}/libXScrnSaver.la
-%attr(755,root,wheel) %{_libdir}/libXScrnSaver.so
 %{_pkgconfigdir}/xscrnsaver.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
