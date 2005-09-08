@@ -88,15 +88,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,root) %{_libdir}/libXScrnSaver.so.*.*.*
+%attr(755,root,root) %{_libdir}/libXss.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libXScrnSaver.so
-%{_libdir}/libXScrnSaver.la
+%attr(755,root,root) %{_libdir}/libXss.so
+%{_libdir}/libXss.la
 %{_pkgconfigdir}/xscrnsaver.pc
 %{_mandir}/man3/*.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libXScrnSaver.a
+%{_libdir}/libXss.a
