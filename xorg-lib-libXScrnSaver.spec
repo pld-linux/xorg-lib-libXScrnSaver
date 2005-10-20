@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
