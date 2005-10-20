@@ -1,19 +1,20 @@
 Summary:	XScrnSaver library
 Summary(pl):	Biblioteka XScrnSaver
 Name:		xorg-lib-libXScrnSaver
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXScrnSaver-%{version}.tar.bz2
-# Source0-md5:	706379f7c1105a2edd0a092c3ef40fa8
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXScrnSaver-%{version}.tar.bz2
+# Source0-md5:	42a224d1e4641ca3eed3a0ab52894517
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -77,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
@@ -95,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXss.so
 %{_libdir}/libXss.la
 %{_pkgconfigdir}/xscrnsaver.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
