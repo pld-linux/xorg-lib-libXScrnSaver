@@ -25,8 +25,8 @@ XScrnSaver library.
 Biblioteka XScrnSaver.
 
 %package devel
-Summary:	Header files libXScrnSaver development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXScrnSaver
+Summary:	Header files for libXScrnSaver library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXScrnSaver
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -36,7 +36,7 @@ Requires:	xorg-proto-scrnsaverproto-devel
 XScrnSaver library.
 
 This package contains the header files needed to develop programs that
-use these libXScrnSaver.
+use libXScrnSaver.
 
 %description devel -l pl
 Biblioteka XScrnSaver.
