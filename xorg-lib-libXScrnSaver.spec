@@ -1,12 +1,12 @@
 Summary:	XScrnSaver library
 Summary(pl):	Biblioteka XScrnSaver
 Name:		xorg-lib-libXScrnSaver
-Version:	0.99.3
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXScrnSaver-%{version}.tar.bz2
-# Source0-md5:	2c1477c90f3fdca4363ad792047dfdcd
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXScrnSaver-%{version}.tar.bz2
+# Source0-md5:	3f50bf04982942f405b29ea360d293c6
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
