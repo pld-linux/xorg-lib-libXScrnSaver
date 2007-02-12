@@ -1,5 +1,5 @@
 Summary:	XScrnSaver library
-Summary(pl.UTF-8):   Biblioteka XScrnSaver
+Summary(pl.UTF-8):	Biblioteka XScrnSaver
 Name:		xorg-lib-libXScrnSaver
 Version:	1.1.2
 Release:	1
@@ -26,7 +26,7 @@ Biblioteka XScrnSaver.
 
 %package devel
 Summary:	Header files for libXScrnSaver library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXScrnSaver
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXScrnSaver
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -46,7 +46,7 @@ używających biblioteki libXScrnSaver.
 
 %package static
 Summary:	Static libXScrnSaver library
-Summary(pl.UTF-8):   Biblioteka statyczna libXScrnSaver
+Summary(pl.UTF-8):	Biblioteka statyczna libXScrnSaver
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
