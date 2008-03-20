@@ -90,13 +90,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXss.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXss.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXss.so
 %{_libdir}/libXss.la
 %{_pkgconfigdir}/xscrnsaver.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/XScreenSaver*.3x*
+%{_mandir}/man3/Xss.3x*
 
 %files static
 %defattr(644,root,root,755)
