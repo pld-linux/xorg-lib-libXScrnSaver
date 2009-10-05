@@ -30,7 +30,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXScrnSaver
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-scrnsaverproto-devel >= 1.1
+Requires:	xorg-proto-scrnsaverproto-devel >= 1.2
 
 %description devel
 XScrnSaver (X11 Screen Saver) extension client library.
