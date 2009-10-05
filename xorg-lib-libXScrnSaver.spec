@@ -1,5 +1,5 @@
-Summary:	XScrnSaver library
-Summary(pl.UTF-8):	Biblioteka XScrnSaver
+Summary:	XScrnSaver (X11 Screen Saver) extension client library
+Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver)
 Name:		xorg-lib-libXScrnSaver
 Version:	1.2.0
 Release:	1
@@ -13,16 +13,16 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-proto-scrnsaverproto-devel >= 1.1
+BuildRequires:	xorg-proto-scrnsaverproto-devel >= 1.2
 BuildRequires:	xorg-proto-xextproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XScrnSaver library.
+XScrnSaver (X11 Screen Saver) extension client library.
 
 %description -l pl.UTF-8
-Biblioteka XScrnSaver.
+Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver).
 
 %package devel
 Summary:	Header files for libXScrnSaver library
@@ -33,13 +33,13 @@ Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-scrnsaverproto-devel >= 1.1
 
 %description devel
-XScrnSaver library.
+XScrnSaver (X11 Screen Saver) extension client library.
 
 This package contains the header files needed to develop programs that
 use libXScrnSaver.
 
 %description devel -l pl.UTF-8
-Biblioteka XScrnSaver.
+Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver).
 
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libXScrnSaver.
@@ -51,12 +51,12 @@ Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-XScrnSaver library.
+XScrnSaver (X11 Screen Saver) extension client library.
 
 This package contains the static libXScrnSaver library.
 
 %description static -l pl.UTF-8
-Biblioteka XScrnSaver.
+Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver).
 
 Pakiet zawiera statyczną bibliotekę libXScrnSaver.
 
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXss.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXss.so.1
 
@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXss.so
 %{_libdir}/libXss.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/scrnsaver.h
 %{_pkgconfigdir}/xscrnsaver.pc
 %{_mandir}/man3/XScreenSaver*.3x*
 %{_mandir}/man3/Xss.3x*
