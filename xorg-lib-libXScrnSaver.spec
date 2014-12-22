@@ -97,8 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXss.la
 %{_includedir}/X11/extensions/scrnsaver.h
 %{_pkgconfigdir}/xscrnsaver.pc
-%{_mandir}/man3/XScreenSaver*.3x*
-%{_mandir}/man3/Xss.3x*
+%{_mandir}/man3/XScreenSaver*.3*
+%{_mandir}/man3/Xss.3*
 
 %files static
 %defattr(644,root,root,755)
