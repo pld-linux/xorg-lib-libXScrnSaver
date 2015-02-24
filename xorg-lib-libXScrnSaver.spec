@@ -2,7 +2,7 @@ Summary:	XScrnSaver (X11 Screen Saver) extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver)
 Name:		xorg-lib-libXScrnSaver
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.bz2
