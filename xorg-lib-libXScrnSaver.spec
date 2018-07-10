@@ -1,17 +1,18 @@
 Summary:	XScrnSaver (X11 Screen Saver) extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver)
 Name:		xorg-lib-libXScrnSaver
-Version:	1.2.2
-Release:	2
+Version:	1.2.3
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.bz2
-# Source0-md5:	7a773b16165e39e938650bcc9027c1d5
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.bz2
+# Source0-md5:	eeea9d5af3e6c143d0ea1721d27a5e49
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel >= 1.2
 BuildRequires:	xorg-proto-xextproto-devel
@@ -29,6 +30,7 @@ Summary:	Header files for libXScrnSaver library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXScrnSaver
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-scrnsaverproto-devel >= 1.2
 
