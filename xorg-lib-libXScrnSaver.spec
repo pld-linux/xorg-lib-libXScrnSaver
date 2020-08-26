@@ -2,7 +2,7 @@ Summary:	XScrnSaver (X11 Screen Saver) extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver)
 Name:		xorg-lib-libXScrnSaver
 Version:	1.2.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.bz2
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXss.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -96,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXss.so
-%{_libdir}/libXss.la
 %{_includedir}/X11/extensions/scrnsaver.h
 %{_pkgconfigdir}/xscrnsaver.pc
 %{_mandir}/man3/XScreenSaver*.3*
