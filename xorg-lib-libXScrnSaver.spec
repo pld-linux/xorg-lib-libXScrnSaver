@@ -1,22 +1,24 @@
 Summary:	XScrnSaver (X11 Screen Saver) extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XScrnSaver (X11 Screen Saver)
 Name:		xorg-lib-libXScrnSaver
-Version:	1.2.3
-Release:	2
+Version:	1.2.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.bz2
-# Source0-md5:	eeea9d5af3e6c143d0ea1721d27a5e49
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-%{version}.tar.xz
+# Source0-md5:	e613751d38e13aa0d0fd8e0149cec057
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel >= 1.2
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -92,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXss.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXss.so.1
 
